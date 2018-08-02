@@ -21,14 +21,13 @@ Add later
 
 ## Analyses
 ### SNP calling
-**In xonstruction**
+**In construction**
 
 
 
 We started the SNP calling using STACKS v 2.0. The whole process is described in SNPcalling.md. 
 
-After Stacks data was filtered to keep only 1 SNP per stack (i.e. 100bp locus made of stacked read) for stacks with max 2 SNPs. SNPs with less than 80% individuals with >=1 reads were also excluded.
-***Plan***
-### Summary
 
-**In construction**
+***Plan***
+
+After Stacks filtering,  keep only 1 SNP per stack (i.e. 100bp locus made of stacked read) for stacks with max 2 SNPs. SNPs with less than 80% individuals with >=1 reads would also be excluded.
