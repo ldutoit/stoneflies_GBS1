@@ -142,4 +142,4 @@ python ~/repos/scripts/stoneflies_GBS1/vcf2structure.py output_snpfiles_restrict
 
 ## Summary 
 
-output_snpfiles_restricted :  4633 sites covered for at least 80 % of 166 individuals. We kept mmaximum 1 site in each 100bp fragment (i.e. each stacks) while excluding fragments with more than 2 sites (i.e. likely to be repeats).
+output_snpfiles_restricted :  4633 sites covered for at least 80 % of 166 individuals. We kept maximum 1 site in each 100bp fragment (i.e. each stacks) while excluding fragments with more than 3 sites (i.e. likely to be repeats).
