@@ -28,4 +28,4 @@ We started the SNP calling using STACKS v 2.0. The whole process is described in
 
 ### Summary
 
-output_snpfiles_restricted :  4633 sites covered for at least 80 % of 166 individuals. We kept mmaximum 1 site in each 100bp fragment (i.e. each stacks) while excluding fragments with more than 3 sites (i.e. likely to be repeats).
+output_snpfiles_restricted :  4633 sites covered for at least 80 % of 166 individuals. We kept maximum 1 site in each 100bp fragment (i.e. each stacks) while excluding fragments with more than 3 sites (i.e. likely to be repeats).
