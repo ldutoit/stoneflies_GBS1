@@ -128,7 +128,7 @@ that now contained 3763 SNPs. It should be noted that the average coverage per i
 I then make files in the genepop format
 
 ```
-perl ~/repos/scripts/stoneflies_GBS1/vcf2genepop.pl vcf=output_snpfiles_restricted/filtered.vcf -pops="L320,L435,L550,L700,L850,S100,S110,S390,S480,S600,S680,S800,S880
+perl ~/repos/scripts/stoneflies_GBS1/vcf2genepop.pl vcf=output_snpfiles_restricted/filtered.vcf -pops="L1200,L320,L435,L550,L700,L850,S100,S110,S390,S480,S600,S680,S800,S880
 " >  output_snpfiles_restricted/filtered.gen
 
 
