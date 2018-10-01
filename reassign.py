@@ -56,4 +56,5 @@ for key in sorted(data.keys()):
 output.close()
 os.system("mv  filtered4popsordered.str filtered4pops.str")
 
-
+#The arlequin format was also created using GENEPOP conversion tool online:
+#http://genepop.curtin.edu.au/genepop_op7.html

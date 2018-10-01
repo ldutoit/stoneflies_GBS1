@@ -138,7 +138,9 @@ We also created a structure input file
 ```
 python ~/repos/scripts/stoneflies_GBS1/vcf2structure.py output_snpfiles_restricted/filtered.vcf output_snpfiles_restricted/filtered.str
 ```
+The arlequin format was also created using GENEPOP conversion tool online:
 
+[http://genepop.curtin.edu.au/genepop_op7.html](http://genepop.curtin.edu.au/genepop_op7.html)
 
 ## Summary 
 
