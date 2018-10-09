@@ -12,7 +12,7 @@ I start with the SNP calling. We will see the rest later.
 ## Physical location of the data
 The sequenced library and the sample information file is here on Google Drive. Contact me for access.
 
-It consists of 2 lanes to a total of approximately 	180 flies.
+It consists of 2 lanes to a total of approximately 	180 flies. After QC, the total number of flies was reduced to 166.
 
 ## Source files
 
@@ -24,8 +24,6 @@ storage.hcs-p01.otago.ac.nz/sci-bioinformatics-project-archive
 ### SNP calling
 
 We started the SNP calling using STACKS v 2.0. The whole process is described in [SNPcalling.md](SNPcalling.md).
-
-
 
 
 ### reassigned pops
