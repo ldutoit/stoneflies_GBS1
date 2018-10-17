@@ -11,7 +11,7 @@ I followed a DENOVO procedure where I called loci in the absence of reference ge
 
 As there are 2 lanes containing 2 barcodes, I ran process_radtags twice.
 
-First I create [snp_calling_files/barcodes1.txt](snp_calling_files/barcodes1.txt) and snp_calling_files/barcodes1.txt](snp_calling_files/barcodes2.txt)
+First I create [snp_calling_files/barcodes1.txt](snp_calling_files/barcodes1.txt) and [snp_calling_files/barcodes2.txt](snp_calling_files/barcodes2.txt)
 
 Then I call process radtags which will separate the reads per individual with barcode rescue (allowing 1 mismatch in the barcode). It is important to have one folder (i.e. here raw) that contains all the files with reads(i.e. only USDA_S1_L001_R1_001_trimmed97clean.fastq) and nothing else.
 
@@ -49,9 +49,9 @@ We also ran FastQC on this. As expected, barcodes were gone and the enzyme is le
 
 ## STACKS pipeline
 
-I create a [population map](snp_calling_files/popmap.txt) that is required by STACKS, there is no population information actually contained in it. It contaisn all the individuals from both lanes...
+I create a [population map](snp_calling_files/popmap.txt) that is required by STACKS, there is no population information actually contained in it. It contaisn all the samples from both lanes. Some individuals will be dropped later if thee result of the sequencing is poor.
 
-Then I call SNPs denovo using [ustacks.sh](ustacks.sh) followed by [fromcstackstopopulations.sh](fromcstackstopopulations.sh).
+I  call SNPs denovo using [ustacks.sh](ustacks.sh) followed by [fromcstackstopopulations.sh](fromcstackstopopulations.sh).
 
 ## Post-STACKS Filtering
 
@@ -78,13 +78,13 @@ data<-read.table("nsnpsperstacks.txt",h=F)
 ```
 
 
-We then ran filter_stacks_vcf.py requiring at least 80% of individuals left (152 out of 179) to have at least 1 of coverage and ended up keeping obtaining X sites. We only kept one read per Stacks for Stacks containg up to two loci. We excluded all other Stacks.
+We then ran [filter_stacks_vcf.py](filter_stacks_vcf.py) requiring at least 80% of individuals left (152 out of 179) to have at least 1 of coverage and. We only kept one read per Stacks for Stacks containg up to two loci. We excluded all other Stacks.
 
 ```
 python ~/repos/scripts/stoneflies_GBS1/filter_stacks_vcf.py SNPcall_default/populations.snps.vcf  output_snpfiles_all -mincov 1   -min_nind_with_mincov 152 
 ```
 
-That outputted 2060 SNPs and a few statistics in the file stats_per_ind.txt/ This number is low. We quickly looked at the distribution of sNPs per individuals. We found that some individuals had very few SNPs:
+That outputted 2060 SNPs and a few statistics in the file stats_per_ind.txt/ This number is low. We quickly looked at the distribution of SNPs per individuals. We found that some individuals had very few SNPs:
 ```
 nsnpsperinds<-read.table(stats_per_ind.txt",,h=T)
 quantile(nsnpsperinds[,3],seq(0,1,0.05))
@@ -114,7 +114,7 @@ L435_F07	9.00522778193	1339	721
 S390_F07	9.15603799186	1474	586
 ```
 
-We excluded those 113 individuals and created a second dataset retaining sites covered for at least 133 out of 166 inds ( 80%). We also keep 1 SNP per STACKS for STACKS with up to 3 SNPs.
+We excluded those 13 individuals and created a second dataset retaining sites covered for at least 133 out of 166 inds (80%). We also keep 1 SNP per STACKS for STACKS with up to 3 SNPs.
 
 ```
 python ~/repos/scripts/stoneflies_GBS1/filter_stacks_vcf.py SNPcall_default/populations.snps.vcf  output_snpfiles_restricted -mincov 1   -min_nind_with_mincov 133 -blacklistsamples bad_inds.txt -max_nsnps_per_valid_stacks 3
