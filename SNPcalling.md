@@ -38,7 +38,7 @@ Then I call process radtags which will separate the reads per individual with ba
 ```
 At this stage, we combined individuals across the two lanes.
 
-4 individuals, L850_V07, L850_V08, S680_D and L550_V02 ( L550_V02.2 in the second lane) are sequenced across both lanes. The control GBSNEG1 is also in both lanes! We quickly combined them before grouping all the samples into one folder and finishing ther SNP calling using combine_process.sh.
+4 individuals, L850_V07, L850_V08, S680_D and L550_V02 ( L550_V02.2 in the second lane) are sequenced across both lanes. The control GBSNEG1 is also in both lanes! We quickly combined them before grouping all the samples into one folder and finishing the SNP calling using [combine_process.sh](combine_process.sh).
 
 
 
@@ -49,7 +49,7 @@ We also ran FastQC on this. As expected, barcodes were gone and the enzyme is le
 
 ## STACKS pipeline
 
-I create a [population map](snp_calling_files/popmap.txt) that is required by STACKS, there is no population information actually contained in it. It contaisn all the samples from both lanes. Some individuals will be dropped later if thee result of the sequencing is poor.
+I create a [population map](snp_calling_files/popmap.txt) that is required by STACKS, there is no population information actually contained in it. It contains all the samples from both lanes. Some individuals will be dropped later if thee result of the sequencing is poor.
 
 I  call SNPs denovo using [ustacks.sh](ustacks.sh) followed by [fromcstackstopopulations.sh](fromcstackstopopulations.sh).
 
