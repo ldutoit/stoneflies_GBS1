@@ -143,5 +143,6 @@ The arlequin format was also created using GENEPOP conversion tool online:
 [http://genepop.curtin.edu.au/genepop_op7.html](http://genepop.curtin.edu.au/genepop_op7.html)
 
 ## Summary 
+***output_snpfiles_restricted/ and he actual SNP files will be uploaded upon acceptance*** 
 
 output_snpfiles_restricted :  4633 sites covered for at least 80 % of 166 individuals. We kept maximum 1 site in each 100bp fragment (i.e. each stacks) while excluding fragments with more than 3 sites (i.e. likely to be repeats).
