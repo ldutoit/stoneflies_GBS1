@@ -1,10 +1,10 @@
 # stoneflies_GBS1
 
 ## Description
-This repository describes the SNP calling associated to the manuscript
+This repository describes the SNP calling associated to the manuscript:
 
 
-**Treeline drives insect wing loss, genome-wide divergence and speciation**
+**Treeline drives insect wing loss, genome-wide divergence and speciation**\n
 Graham A. McCulloch, Brodie J. Foster, Ludovic Dutoit, Eleanor Hay, Andrew J. Veale, Peter K. Dearden, Jonathan M. Waters
 .
 
@@ -12,11 +12,8 @@ Graham A. McCulloch, Brodie J. Foster, Ludovic Dutoit, Eleanor Hay, Andrew J. Ve
 
 ## Source files
 
-The sequenced library and the sample information file is  on the local high capacity storage at otago uni:
+equencing data used in this study is available at [PRJNA530622](http://www.ncbi.nlm.nih.gov/bioproject/530622) on the NCBI Sequence Read Archive. 
 
-storage.hcs-p01.otago.ac.nz/sci-bioinformatics-project-archive
-
-It is in the process of being uploaded to the short read archive
 
 
 ## Analyses
