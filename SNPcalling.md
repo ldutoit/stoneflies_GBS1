@@ -79,13 +79,13 @@ data<-read.table("nsnpsperstacks.txt",h=F)
 ```
 
 
-We then ran [filter_stacks_vcf.py](filter_stacks_vcf.py) requiring at least 80% of individuals left (152 out of 179) to have at least 1 of coverage and. We only kept one read per Stacks for Stacks containg up to two loci. We excluded all other Stacks.
+We then ran [filter_stacks_vcf.py](filter_stacks_vcf.py) requiring at least 80% of individuals left (152 out of 179) to have at least 1 of coverage. We only kept one read per Stacks for Stacks containg up to two loci. We excluded all other Stacks.
 
 ```
 python ~/repos/scripts/stoneflies_GBS1/filter_stacks_vcf.py SNPcall_default/populations.snps.vcf  output_snpfiles_all -mincov 1   -min_nind_with_mincov 152 
 ```
 
-That outputted 2060 SNPs and a few statistics in the file stats_per_ind.txt/ This number is low. We quickly looked at the distribution of SNPs per individuals. We found that some individuals had very few SNPs:
+That outputted 2060 SNPs and a few statistics. This number of SNPs is low. We quickly looked at the distribution of SNPs per individuals. We found that some individuals had very few SNPs:
 ```
 nsnpsperinds<-read.table(stats_per_ind.txt",,h=T)
 quantile(nsnpsperinds[,3],seq(0,1,0.05))
@@ -120,8 +120,7 @@ We excluded those 13 individuals and created a second dataset retaining sites co
 ```
 python ~/repos/scripts/stoneflies_GBS1/filter_stacks_vcf.py SNPcall_default/populations.snps.vcf  output_snpfiles_restricted -mincov 1   -min_nind_with_mincov 133 -blacklistsamples bad_inds.txt -max_nsnps_per_valid_stacks 3
 ```
-
-that now contained 3763 SNPs. It should be noted that the average coverage per ind is very high. For the same amount of sequencing, it is possible to use more individuals or to use enzymes that will lead to more sites.
+4633 sites covered for at least 80 % of 166 individuals.
 
 ## Genepop and structure file 
 
