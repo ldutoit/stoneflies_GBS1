@@ -3,7 +3,7 @@
 
 For the SNP calling, I used STACKS [version 2.0b](http://catchenlab.life.illinois.edu/stacks/)
 
-I followed a DENOVO procedure where I called loci in the absence of reference genome. The general procedure is outline in the stacks on the [software website](http://catchenlab.life.illinois.edu/stacks/manual/). I started by a quick quality control step looking at our reads using fastQC and did not notice any contamination.
+We followed a DENOVO procedure where I called loci in the absence of reference genome. The general procedure is outline on the [stacks  website](http://catchenlab.life.illinois.edu/stacks/manual/). I started by a quick quality control step looking at our reads using fastQC and did not notice any contamination.
 
 
 
