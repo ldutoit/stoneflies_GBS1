@@ -3,7 +3,7 @@
 
 For the SNP calling we used STACKS [version 2.0b](http://catchenlab.life.illinois.edu/stacks/)
 
-We followed a DENOVO procedure where I called loci in the absence of reference genome. The general procedure is outline on the [stacks  website](http://catchenlab.life.illinois.edu/stacks/manual/). We started by a quick quality control step looking at our reads using FastQC and did not notice any contamination.
+We followed a DENOVO procedure where we called loci in the absence of reference genome. The general procedure is outline on the [stacks  website](http://catchenlab.life.illinois.edu/stacks/manual/). We started by a quick quality control step looking at our reads using FastQC and did not notice any contamination.
 
 ```
 fastqc *qc.gz
@@ -15,9 +15,9 @@ fastqc *qc.gz
 
 As there are 2 lanes containing 2 barcodes, I ran process_radtags twice.
 
-First I create [snp_calling_files/barcodes1.txt](snp_calling_files/barcodes1.txt) and [snp_calling_files/barcodes2.txt](snp_calling_files/barcodes2.txt)
+First we create [snp_calling_files/barcodes1.txt](snp_calling_files/barcodes1.txt) and [snp_calling_files/barcodes2.txt](snp_calling_files/barcodes2.txt)
 
-Then I call process radtags which will separate the reads per individual with barcode rescue (allowing 1 mismatch in the barcode). It is important to have one folder (i.e. here raw) that contains all the files with reads(i.e. only USDA_S1_L001_R1_001_trimmed97clean.fastq) and nothing else.
+Then we call process radtags which will separate the reads per individual with barcode rescue (allowing 1 mismatch in the barcode). It is important to have one folder (i.e. here raw) that contains all the files with reads (i.e. only USDA_S1_L001_R1_001_trimmed97clean.fastq) and nothing else.
 
 
 ```
