@@ -4,10 +4,8 @@
 This repository describes the SNP calling associated to the manuscript:
 
 
-**Treeline drives insect wing loss, genome-wide divergence and speciation**\n
+**Treeline drives insect wing loss, genome-wide divergence and speciation**
 Graham A. McCulloch, Brodie J. Foster, Ludovic Dutoit, Eleanor Hay, Andrew J. Veale, Peter K. Dearden, Jonathan M. Waters
-.
-
 
 
 ## Source files
@@ -25,7 +23,7 @@ We started the SNP calling using STACKS v 2.0. The whole process is described in
 ### reassigned pops
 
 
-I transformed the dataset of 14 sample locations into 4 populations using [reassign.py](reassign.py) and created the files output_snpfiles_restricted/filtered4pops.vcf,  output_snpfiles_restricted/filtered4pops.str output_snpfiles_restricted/filtered4pops.dat.
+I transformed the dataset of 14 sample locations into 4 populations using [reassign.py](reassign.py) and created the files [output_snpfiles_restricted/filtered4pops.vcf](output_snpfiles_restricted/filtered4pops.vcf),  [output_snpfiles_restricted/filtered4pops.str](output_snpfiles_restricted/filtered4pops.str) [output_snpfiles_restricted/filtered4pops.dat](output_snpfiles_restricted/filtered4pops.dat).
 
 The pops were:
 
