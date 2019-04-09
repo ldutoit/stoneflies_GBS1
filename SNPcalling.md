@@ -1,9 +1,13 @@
 ## SNPcalling.md
 
 
-For the SNP calling, I used STACKS [version 2.0b](http://catchenlab.life.illinois.edu/stacks/)
+For the SNP calling we used STACKS [version 2.0b](http://catchenlab.life.illinois.edu/stacks/)
 
-We followed a DENOVO procedure where I called loci in the absence of reference genome. The general procedure is outline on the [stacks  website](http://catchenlab.life.illinois.edu/stacks/manual/). I started by a quick quality control step looking at our reads using fastQC and did not notice any contamination.
+We followed a DENOVO procedure where I called loci in the absence of reference genome. The general procedure is outline on the [stacks  website](http://catchenlab.life.illinois.edu/stacks/manual/). We started by a quick quality control step looking at our reads using FastQC and did not notice any contamination.
+
+```
+fastqc *qc.z
+```
 
 
 
@@ -40,10 +44,7 @@ At this stage, we combined individuals across the two lanes.
 
 4 individuals, L850_V07, L850_V08, S680_D and L550_V02 ( L550_V02.2 in the second lane) are sequenced across both lanes. The control GBSNEG1 is also in both lanes! We quickly combined them before grouping all the samples into one folder and finishing the SNP calling using [combine_process.sh](combine_process.sh).
 
-
-
 We also ran FastQC on this. As expected, barcodes were gone and the enzyme is left in. That is a good checkpoint to have a look at overrepresented sequences and remove contamination.
-
 
 
 
@@ -125,7 +126,7 @@ that now contained 3763 SNPs. It should be noted that the average coverage per i
 ## Genepop and structure file 
 
 
-I then make files in the genepop format
+We then make convert to the genepop format
 
 ```
 perl ~/repos/scripts/stoneflies_GBS1/vcf2genepop.pl vcf=output_snpfiles_restricted/filtered.vcf -pops="L1200,L320,L435,L550,L700,L850,S100,S110,S390,S480,S600,S680,S800,S880
@@ -143,6 +144,5 @@ The arlequin format was also created using GENEPOP conversion tool online:
 [http://genepop.curtin.edu.au/genepop_op7.html](http://genepop.curtin.edu.au/genepop_op7.html)
 
 ## Summary 
-***output_snpfiles_restricted/ and he actual SNP files will be uploaded upon acceptance*** 
 
 output_snpfiles_restricted :  4633 sites covered for at least 80 % of 166 individuals. We kept maximum 1 site in each 100bp fragment (i.e. each stacks) while excluding fragments with more than 3 sites (i.e. likely to be repeats).
