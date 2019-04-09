@@ -28,7 +28,7 @@ We started the SNP calling using STACKS v 2.0. The whole process is described in
 ### reassigned pops
 
 
-I transformed the dataset of 14 sample locations into 4 pops using reassign.py and created the files output_snpfiles_restricted/filtered4pops.vcf,  output_snpfiles_restricted/filtered4pops.str output_snpfiles_restricted/filtered4pops.dat.
+I transformed the dataset of 14 sample locations into 4 populations using [reassign.py](reassign.py) and created the files output_snpfiles_restricted/filtered4pops.vcf,  output_snpfiles_restricted/filtered4pops.str output_snpfiles_restricted/filtered4pops.dat.
 
 The pops were:
 
@@ -41,7 +41,6 @@ Six Full (SF)
 
 ### Summary
 
-***The actual SNP files will be uploaded upon acceptance*** 
-output_snpfiles_restricted :  4633 sites covered for at least 80 % of 166 individuals. We kept maximum 1 site in each 100bp fragment (i.e. each stacks) while excluding fragments with more than 3 sites (i.e. likely to be repeats).
+[output_snpfiles_restricted](output_snpfiles_restricted)  4633 sites covered for at least 80 % of 166 individuals. We kept maximum 1 site in each 100bp fragment (i.e. each stacks) while excluding fragments with more than 3 sites (i.e. likely to be repeats).
 
-The file with the **4pops** extension change nothing else than individual names!
+The file with the **4pops** extension change nothing else than individual names from sampling location to populations.
