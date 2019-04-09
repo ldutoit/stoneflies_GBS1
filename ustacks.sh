@@ -9,7 +9,6 @@
 ###PARAMETERS
 
 module load Stacks
-src=/home/ludovic.dutoit/projects/RAD_Acacia/STACKS
 
 files=$(ls  samples)
 
