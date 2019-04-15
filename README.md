@@ -10,7 +10,7 @@ Graham A. McCulloch, Brodie J. Foster, Ludovic Dutoit, Eleanor Hay, Andrew J. Ve
 
 ## Source files
 
-equencing data used in this study is available at [PRJNA530622](http://www.ncbi.nlm.nih.gov/bioproject/530622) on the NCBI Sequence Read Archive. 
+Sequencing data used in this study is available at [PRJNA530622](http://www.ncbi.nlm.nih.gov/bioproject/530622) on the NCBI Sequence Read Archive. 
 
 
 
