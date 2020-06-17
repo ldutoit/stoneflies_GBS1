@@ -39,3 +39,9 @@ Six Full (SF)
 [output_snpfiles_restricted](output_snpfiles_restricted)  4633 sites covered for at least 80 % of 166 individuals. We kept maximum 1 site in each 100bp fragment (i.e. each stacks) while excluding fragments with more than 3 sites (i.e. likely to be repeats).
 
 The file with the **4pops** extension change nothing else than individual names from sampling location to populations.
+
+
+### Note on alignment
+
+
+We ran a new SNP calling once we got the reference genome.  After running combineprocess.sh, we used [align.sh] that combine alignment and ref_map from Stacks. We then filtered : **In construction** ...
