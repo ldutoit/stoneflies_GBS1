@@ -20,7 +20,7 @@ zcat samples1/L850_V07.fq.gz samples2/L850_V07.fq.gz | bgzip -c > temp
 mv temp samples/L850_V07.fq.gz 
 
 zcat samples1/L550_V02.fq.gz samples2/L550_V02.2.fq.gz | bgzip -c > temp2
-mv temp samples/L550_V02.fq.gz 
+mv temp2 samples/L550_V02.fq.gz 
 
 zcat samples1/GBSNEG1.fq.gz samples2/GBSNEG1.fq.gz | bgzip -c > temp
 mv temp samples/GBSNEG1.fq.gz 
