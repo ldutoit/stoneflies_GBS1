@@ -190,5 +190,13 @@ do
     bwa mem -t 8 $bwa_db $src/${sample}.fq.gz  |   samtools view -b | samtools sort - -threads 8 > ${sample}.bam
 done
 cd ..
-module load Stacks
+
+module load Stacks # v2.53
+
 ref_map.pl --samples alignment --popmap popmap_all.txt -T 8  -o output_refmap/
+populations -P output_refmap/ -M popmap179.txt  --vcf --structure --plink --treemix --max-obs-het 0.65 -r 0.75 
+
+#Removed 87077 loci that did not pass sample/population constraints from 100912 loci.
+#Kept 13835 loci, composed of 1293456 sites; 8803 of those sites were filtered, 67922 variant sites remained.
+#    992665 genomic sites, of which 297252 were covered by multiple loci (29.9%). 
+#in output_aligned in a few different format
