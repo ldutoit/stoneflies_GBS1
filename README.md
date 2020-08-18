@@ -44,4 +44,4 @@ The file with the **4pops** extension change nothing else than individual names 
 ### Note on alignment
 
 
-We ran a new SNP calling once we got the reference genome.  After running combineprocess.sh, we used [align.sh] that combine alignment and ref_map from Stacks. We then filtered out any SNP gentoyped in less than 75% of individuals or having more 65% heterozygosity.
+We ran a new SNP calling once we got the reference genome.  After running combineprocess.sh, we used [align.sh](align.sh) that combine alignment and ref_map from Stacks. We then filtered out any SNP gentoyped in less than 75% of individuals or having more 65% heterozygosity.
